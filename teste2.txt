@@ -1,0 +1,7 @@
+carro
+casa
+predio
+mansao
+alpiste
+condominio
+prato
