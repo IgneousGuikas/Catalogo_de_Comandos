@@ -5,6 +5,8 @@ class Ponto(object):
     def __str__(self):
         return "({0},{1})" .format(self.x, self.y)
 
+
+
 class Ponto3D(Ponto, object):
     def __init__(self, x, y, z):
         Ponto.__init__(self, x, y)
