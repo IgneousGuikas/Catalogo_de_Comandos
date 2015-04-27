@@ -51,6 +51,11 @@ print(p2 == p1)
 print()
 print(p3 is p1)
 print(p3 == p1)
+#  Em Python, == para objetos retorna se ambos são o mesmo objeto e não se possuem
+# o mesmo valor
+
+
+
 
 print('''
 _______________________________________________________________________________
