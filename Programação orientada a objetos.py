@@ -87,7 +87,3 @@ class Autor(object):
 autor = Autor('Olaf', 'olaf.o@hotmail.com', 'masculino')
 print(autor)
 L1 = Livro('abc', autor, 12.5, 20)
-
-'''
-________________________________________________________________________________________________
-'''

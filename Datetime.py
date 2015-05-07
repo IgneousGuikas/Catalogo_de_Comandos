@@ -28,13 +28,13 @@ print(tempo1)
 
 
 
-tempo = datetime.time.(0,1,30)
-for i in range(91):
-    if tempo.seconds == 0:
-        tempo
-    elif i >= 60:
-        tempo = tempo - datetime.time(0,0,i-60)
+tempo = datetime.time(0,1,5)
+delta = datetime.timedelta(minutes=tempo.minute,seconds=tempo.second)
+print(delta.total_seconds())
+for i in range(1,int(delta.total_seconds()) + 1):
+    if tempo.second == 0:
+        tempo = tempo.replace(tempo.hour,tempo.minute-1,59)
     else:
-        tempo = tempo - datetime.time(0,0,i)
+        tempo = tempo.replace(tempo.hour,tempo.minute,tempo.second-1)
     print(tempo)
     time.sleep(1)
