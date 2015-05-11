@@ -87,6 +87,28 @@ class ActionClick(QtGui.QWidget):
     def handleClicked(self):
         self.texto.setText('Clicado')
 
+
+
+class ScrollArea(QtGui.QWidget):
+    
+    def __init__(self):
+        super(ScrollArea, self).__init__()
+        self.setGeometry(0,0,250,150)
+        self.centerOnScreen()
+        self.setMinimumSize(250,150)
+        self.setMaximumSize(550,450)
+        
+        
+    def centerOnScreen(self):
+        resolution = QtGui.QDesktopWidget().screenGeometry()
+        self.move( ( (resolution.width() / 2 ) - (self.frameSize().width() / 2 ) ) , ( (resolution.height() / 2 ) - ( self.frameSize().height() / 2 ) ) )
+  
+
+
+
+
+
+
 if __name__ == '__main__':
     app = QtGui.QApplication(sys.argv)
 
@@ -94,17 +116,23 @@ if __name__ == '__main__':
     win2 = Sobrenome('Gikas')
     win.show()
     app.exec_()
-    win.hide()
     win2.show()
     app.exec_()
+    
     win3 = JogoVelha()
     win3.show()
     app.exec_()
+    
     win4 = Formulario()
     win4.show()
     app.exec_()
+    
     win5 = ActionClick()
     win5.show()
+    app.exec_()
+    
+    win6 = ScrollArea()
+    win6.show()
     app.exec_()
 
     
