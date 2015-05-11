@@ -60,7 +60,7 @@ class Formulario(QtGui.QWidget):
     def __init__(self):
         super(Formulario, self).__init__()
         self.setGeometry(300,300,250,150)
-        layout = QtGui.QVBoxLayout(self)
+        layout = QtGui.QGridLayout(self)
         layout.addWidget(QtGui.QPushButton('Um', self))
         layout.addWidget(QtGui.QPushButton('Dois', self))
         layout.addWidget(QtGui.QPushButton('Três', self))
